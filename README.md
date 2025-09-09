@@ -3,7 +3,7 @@
 Detect fake news and verify the authenticity of news articles using a **Multinomial Naive Bayes** classifier with **TF-IDF vectorization**.  
 The backend is built with **Flask**, while the model is developed using **scikit-learn, pandas, numpy, matplotlib**.  
 The frontend is implemented with **React** and styled with **Tailwind CSS**.  
-The trained model achieves an accuracy of around **98.7%** on the test dataset.
+The trained model achieves an accuracy of around **~89%** on the test dataset.
 
 ---
 
