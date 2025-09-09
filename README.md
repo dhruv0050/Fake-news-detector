@@ -176,9 +176,7 @@ If you want to retrain or inspect the model, see `model/model.ipynb` and ensure 
 - Glass morphism effects and gradient styling
 
 ### Model Performance
-- **Accuracy:** ~98.7% on test data
-- **Fake News Detection:** 99.2% precision
-- **Real News Accuracy:** 98.7% precision
+- **Accuracy:** ~89% 
 - **Response Time:** ~0.3 seconds average
 
 ---
