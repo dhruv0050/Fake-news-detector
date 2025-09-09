@@ -35,22 +35,22 @@ function Prediction() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-cyan-50 to-teal-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-green-50 to-emerald-100">
       {/* Header */}
-      <div className="bg-white/90 backdrop-blur-sm shadow-lg border-b border-teal-100">
+      <div className="bg-white/90 backdrop-blur-sm shadow-lg border-b border-emerald-100">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center shadow-md">
+              <div className="w-8 h-8 bg-gradient-to-r from-emerald-600 to-green-600 rounded-lg flex items-center justify-center shadow-md">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Fake News Detector</h1>
+              <h1 className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Fake News Detector</h1>
             </div>
             <button 
               onClick={() => navigate('/')}
-              className="text-teal-600 hover:text-teal-800 font-medium transition-colors flex items-center space-x-1"
+              className="text-emerald-600 hover:text-emerald-800 font-medium transition-colors flex items-center space-x-1"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -64,14 +64,14 @@ function Prediction() {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">News Article Analysis</h2>
-          <p className="text-xl text-slate-600">Paste your news article content below to analyze its authenticity</p>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">News Article Analysis</h2>
+          <p className="text-xl text-gray-600">Paste your news article content below to analyze its authenticity</p>
         </div>
 
         <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/30 p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="content" className="block text-sm font-semibold text-slate-700 mb-3">
+              <label htmlFor="content" className="block text-sm font-semibold text-gray-700 mb-3">
                 News Article Content
               </label>
               <textarea
@@ -80,11 +80,11 @@ function Prediction() {
                 onChange={(e) => setContent(e.target.value)}
                 placeholder="Paste the news article content here..."
                 rows={12}
-                className="w-full px-4 py-3 border border-cyan-200 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 resize-none text-slate-700 text-sm leading-relaxed bg-white/80 backdrop-blur-sm"
+                className="w-full px-4 py-3 border border-green-200 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 resize-none text-gray-700 text-sm leading-relaxed bg-white/80 backdrop-blur-sm"
                 required
               />
               <div className="mt-2 text-right">
-                <span className="text-sm text-teal-600">{content.length} characters</span>
+                <span className="text-sm text-emerald-600">{content.length} characters</span>
               </div>
             </div>
 
@@ -92,7 +92,7 @@ function Prediction() {
               <button
                 type="submit"
                 disabled={loading || !content.trim()}
-                className="flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 disabled:from-slate-400 disabled:to-slate-500 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-[1.02] disabled:transform-none disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                className="flex-1 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-[1.02] disabled:transform-none disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
               >
                 {loading ? (
                   <div className="flex items-center justify-center space-x-2">
@@ -107,7 +107,7 @@ function Prediction() {
               <button
                 type="button"
                 onClick={resetForm}
-                className="px-6 py-3 border border-teal-300 text-teal-700 font-semibold rounded-2xl hover:bg-teal-50 transition-all duration-200 shadow-md hover:shadow-lg"
+                className="px-6 py-3 border border-emerald-300 text-emerald-700 font-semibold rounded-2xl hover:bg-emerald-50 transition-all duration-200 shadow-md hover:shadow-lg"
               >
                 Clear
               </button>
@@ -116,14 +116,14 @@ function Prediction() {
 
           {/* Results */}
           {prediction !== null && (
-            <div className="mt-8 p-6 rounded-2xl border-2 border-dashed border-cyan-200 bg-gradient-to-r from-cyan-50 to-teal-50">
+            <div className="mt-8 p-6 rounded-2xl border-2 border-dashed border-green-200 bg-gradient-to-r from-green-50 to-emerald-50">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-slate-800 mb-4">Analysis Result</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Analysis Result</h3>
                 
                 <div className={`inline-flex items-center px-6 py-3 rounded-full text-lg font-semibold shadow-lg ${
                   prediction === 1 
-                    ? 'bg-gradient-to-r from-rose-500 to-red-500 text-white border-2 border-rose-300' 
-                    : 'bg-gradient-to-r from-emerald-500 to-green-500 text-white border-2 border-emerald-300'
+                    ? 'bg-gradient-to-r from-red-500 to-rose-500 text-white border-2 border-red-300' 
+                    : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white border-2 border-green-300'
                 }`}>
                   {prediction === 1 ? (
                     <>
@@ -142,7 +142,7 @@ function Prediction() {
                   )}
                 </div>
                 
-                <p className="mt-4 text-slate-600 text-sm max-w-2xl mx-auto">
+                <p className="mt-4 text-gray-600 text-sm max-w-2xl mx-auto">
                   {prediction === 1 
                     ? 'This article shows characteristics commonly found in fake news. Please verify with reliable sources.'
                     : 'This article appears to be legitimate news content based on our analysis.'
