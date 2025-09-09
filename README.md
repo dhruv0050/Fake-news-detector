@@ -138,7 +138,7 @@ Invoke-RestMethod -Uri http://localhost:5000/predict -Method Post -Body $body -C
 
 ## Model & artifacts
 
-* **Model:** Multinomial Naive Bayes with TF-IDF vectorization (achieves ~98.7% accuracy).
+* **Model:** Multinomial Naive Bayes with TF-IDF vectorization (achieves ~89% accuracy).
 * **Dataset:** WELFake Dataset with comprehensive preprocessing and cleaning.
 * **Features:** 
   - TF-IDF vectorization with n-grams (1,2)
