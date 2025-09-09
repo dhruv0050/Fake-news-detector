@@ -1,8 +1,19 @@
-import './App.css'
+import React, { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Landing from './components/landing';
+import Prediction from './components/prediction';
 
 function App() {
   return (
-    <h1 className='text-4xl font-bold text-amber-900'>Fake News Predictor</h1>
+    <Router>
+        <div className="app">
+          <Routes>
+            <Route path="/" element={<Landing/>}/>
+            <Route path="/predict" element={<Prediction/>}/>
+          </Routes>
+        </div>
+      </Router>
   )
 }
 
